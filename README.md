@@ -39,18 +39,24 @@
       - GET - 쿼리 파라미터 => /url?username=hello&age=20
       - POST - HTML Form => 메세지 바디에 쿼리 파라미터 형식으로 전달 
       - HTTP message body => JSON(POST, PUT, PATCH), XML, TEXT
-    10.HTTP 요청 데이터 - GET 쿼리 파라미터
+    10.HTTP 요청 데이터 - 'GET' 쿼리 파라미터
       - 검색, 필터, 페이징등에서 많이 사용하는 방식
       - 단일 파라미터: request.getParameter("name"); // String
       - 복수 파라미터: request.getParameterValues("username"); // String[]
-    11.HTTP 요청 데이터 - POST HTML Form
+    11.HTTP 요청 데이터 - 'POST' HTML Form
+      - 회원가입 , 주문 요청에 사용하는 방식
       - Body에 포함된 데이터가 어떤 형식인지 'content-type'지정 => 'application/x-www-form-urlencoded'
     12.HTTP 요청 데이터 - API message body - '단순 텍스트'
       - request.getInputStream() => StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8)
       - inputStream은 byte 코드로 반환 따라서 문자로 볼려면 문자표(UTF-8)를 지정
     13.HTTP 요청 데이터 - API message body - 'JSON'
+      * JSON 변환 라이브러리: Jackson(ObjectMapper), Gson
       - {"username": "hello", "age": "20"} <- JSON
       - DTO 생성 -> objectMapper.readValue(messageBody, HelloData.class) -> DTO 객체 저장
-      - JSON 변환 라이브러리: Jackson(ObjectMapper), Gson
     14.HttpServletResponse - 기본 사용법
       - Content, Cookie, redirect 
+    15.HTTP 응답 데이터 - '단순 데이터, HTML'
+      - Content-Type: text/html;charset=utf-8
+    16.HTTP 응답 데이터 - 'API JSON'
+      - Content-Type: application/json
+      - objectMapper.writeValueAsString(helloData) <- Strong to JSON 
