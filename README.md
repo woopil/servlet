@@ -32,5 +32,7 @@
     6.Hello 서블릿
       - HelloServlet -> webapp/basic/index.html <- Welcome Page
     7.HttpServletRequest - 개요
-      -
-
+      - 임시 저장소: request.setAttribute(key, value) <-> request.getAttribute(key)
+      - 세션 관리: requset.getSession(create: true)
+    8.HttpServletRequest - 기본 사용법
+    9.HTTP 요청 데이터 - 개요
