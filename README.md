@@ -36,3 +36,11 @@
       - 세션 관리: requset.getSession(create: true)
     8.HttpServletRequest - 기본 사용법
     9.HTTP 요청 데이터 - 개요
+      - GET - 쿼리 파라미터 => /url?username=hello&age=20
+      - POST - HTML Form => 메세지 바디에 쿼리 파라미터 형식으로 전달 
+      - HTTP message body => JSON(POST, PUT, PATCH), XML, TEXT
+    10.HTTP 요청 데이터 - GET 쿼리 파라미터
+      - 검색, 필터, 페이징등에서 많이 사용하는 방식
+      - 단일 파라미터: request.getParameter("name"); // String
+      - 복수 파라미터: request.getParameterValues("username"); // String[]
+    11.
