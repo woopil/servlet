@@ -53,4 +53,4 @@
       - DTO 생성 -> objectMapper.readValue(messageBody, HelloData.class) -> DTO 객체 저장
       - JSON 변환 라이브러리: Jackson(ObjectMapper), Gson
     14.HttpServletResponse - 기본 사용법
-
+      - Content, Cookie, redirect 
