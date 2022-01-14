@@ -43,4 +43,14 @@
       - 검색, 필터, 페이징등에서 많이 사용하는 방식
       - 단일 파라미터: request.getParameter("name"); // String
       - 복수 파라미터: request.getParameterValues("username"); // String[]
-    11.
+    11.HTTP 요청 데이터 - POST HTML Form
+      - Body에 포함된 데이터가 어떤 형식인지 'content-type'지정 => 'application/x-www-form-urlencoded'
+    12.HTTP 요청 데이터 - API message body - '단순 텍스트'
+      - request.getInputStream() => StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8)
+      - inputStream은 byte 코드로 반환 따라서 문자로 볼려면 문자표(UTF-8)를 지정
+    13.HTTP 요청 데이터 - API message body - 'JSON'
+      - {"username": "hello", "age": "20"} <- JSON
+      - DTO 생성 -> objectMapper.readValue(messageBody, HelloData.class) -> DTO 객체 저장
+      - JSON 변환 라이브러리: Jackson(ObjectMapper), Gson
+    14.HttpServletResponse - 기본 사용법
+

@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/*
+* 1.파라미터 전송 기능
+* http://localhost:8080/request-param?username=kim&age=33&username=choi
+* */
 @WebServlet(name = "RequestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
 
